@@ -22,8 +22,13 @@
                 font-family: 'Nunito', sans-serif;
             } */
         </style>
+        <script src="{{ asset('lib/alpinejs.396.min.js') }}" defer></script>
     </head>
     <body class="antialiased">
        <div class="text-gold text-4xl">Hello</div>
+       <div x-data="{open:false}">
+          <button @click="open = !open">Toggle</button>
+          <div x-show="open">COntent</div>
+       </div>
     </body>
 </html>
