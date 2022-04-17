@@ -25,7 +25,7 @@ return [
     |
     */
 
-    'start_page' => 'dashboard',
+    'start_page' => 'collections/pages',
 
     /*
     |--------------------------------------------------------------------------
@@ -38,7 +38,7 @@ return [
     */
 
     'widgets' => [
-        'getting_started',
+        // 'getting_started',
     ],
 
     /*

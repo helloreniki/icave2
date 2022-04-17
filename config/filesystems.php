@@ -44,6 +44,28 @@ return [
             'throw' => false,
         ],
 
+        // add assets containers/folder
+        'public_files' => [
+            'driver' => 'local',
+            'root' => public_path().'/assets/files',
+            'url' => env('APP_URL').'/assets/files',
+            'visibility' => 'public',
+        ],
+
+        'public_images' => [
+            'driver' => 'local',
+            'root' => public_path().'/assets/images',
+            'url' => env('APP_URL').'/assets/images',
+            'visibility' => 'public',
+        ],
+
+        'public_media' => [
+            'driver' => 'local',
+            'root' => public_path().'/assets/media',
+            'url' => env('APP_URL').'/assets/media',
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

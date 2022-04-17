@@ -14,7 +14,7 @@ return [
         |
         */
 
-        'route' => 'img',
+        'route' => '/assets/img',
 
         /*
         |--------------------------------------------------------------------------
@@ -52,8 +52,8 @@ return [
         |
         */
 
-        'cache' => false,
-        'cache_path' => public_path('img'),
+        'cache' => true,
+        'cache_path' => public_path('/assets/img'),
 
         /*
         |--------------------------------------------------------------------------
@@ -97,8 +97,8 @@ return [
     */
 
     'thumbnails' => [
-        'max_width' => 10000,
-        'max_height' => 10000,
+        'max_width' => 2000,
+        'max_height' => 2000,
     ],
 
     /*
