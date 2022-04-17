@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18b09cf59b5fdcdf6ab76d12f5dd9de6",
+    "content-hash": "c5085a69acacc624429f3939b2ad2274",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -1265,6 +1265,56 @@
                 }
             ],
             "time": "2022-02-28T11:07:21+00:00"
+        },
+        {
+            "name": "doublethreedigital/duplicator",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doublethreedigital/duplicator.git",
+                "reference": "85c3e94dbbf4d583832886ff215bef35eae46e5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doublethreedigital/duplicator/zipball/85c3e94dbbf4d583832886ff215bef35eae46e5b",
+                "reference": "85c3e94dbbf4d583832886ff215bef35eae46e5b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0 || ^8.1",
+                "statamic/cms": "3.2.* || 3.3.*"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^4.2 || ^5.0 || ^6.1",
+                "orchestra/testbench": "^5.0 || ^6.0 || ^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Duplicator",
+                    "description": "Duplicate Entries in the Statamic 3 Control Panel"
+                },
+                "laravel": {
+                    "providers": [
+                        "DoubleThreeDigital\\Duplicator\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DoubleThreeDigital\\Duplicator\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Duplicate Entries in the Statamic 3 Control Panel",
+            "support": {
+                "issues": "https://github.com/doublethreedigital/duplicator/issues",
+                "source": "https://github.com/doublethreedigital/duplicator/tree/v2.2.0"
+            },
+            "time": "2022-04-15T09:55:50+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",
