@@ -41,4 +41,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // vendor/statamic/cms/src/Auth/Eloquent/User.php
+    // vendor/statamic/cms/src/Auth/User.php
+    public function isSuper()
+    {
+        if ((bool) $this->get('super')) {
+            return true;
+        }
+        return false;
+    }
 }
