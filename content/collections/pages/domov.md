@@ -3,7 +3,7 @@ id: a8895c33-3054-4260-ba6e-0c9a5dd266c9
 blueprint: pages
 title: Domov
 updated_by: 1
-updated_at: 1650290579
+updated_at: 1650292059
 header: 'The CAVE'
 subheader: 'Domaci okusi, ki vas bodo navdusili. Vabljeni!'
 bg_image: mike-PxJ9zkM2wdA-unsplash.jpg
@@ -44,5 +44,31 @@ pb:
     gap: '4'
     sirina: container
     type: slika_grid
+    enabled: true
+  -
+    slike:
+      -
+        slika: chesley-mccarty-ZimlF1xeZ8k-unsplash.jpg
+      -
+        slika: fabrizio-magoni-boaDpmC-_Xo-unsplash.jpg
+        velikost_slike: col-span-2
+      -
+        slika: jay-wennington-N_Y88TWmGwA-unsplash-(2).jpg
+      -
+        slika: jonathan-borba-uB7q7aipU2o-unsplash.jpg
+      -
+        slika: pinar-kucuk-Ae7jQFDTPk4-unsplash.jpg
+        velikost_slike: col-span-2
+      -
+        slika: pablo-merchan-montes-Orz90t6o0e4-unsplash-(1).jpg
+      -
+        slika: rumman-amin-LNn6O_Mt730-unsplash.jpg
+        velikost_slike: row-span-2
+      -
+        slika: alex-haney-CAhjZmVk5H4-unsplash-(1).jpg
+      -
+        slika: miti-qYreP9QOdrk-unsplash.jpg
+        velikost_slike: col-span-2
+    type: slika_mixed
     enabled: true
 ---
