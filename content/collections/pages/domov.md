@@ -3,7 +3,7 @@ id: a8895c33-3054-4260-ba6e-0c9a5dd266c9
 blueprint: pages
 title: Domov
 updated_by: 1
-updated_at: 1650292059
+updated_at: 1650292208
 header: 'The CAVE'
 subheader: 'Domaci okusi, ki vas bodo navdusili. Vabljeni!'
 bg_image: mike-PxJ9zkM2wdA-unsplash.jpg
@@ -70,5 +70,10 @@ pb:
         slika: miti-qYreP9QOdrk-unsplash.jpg
         velikost_slike: col-span-2
     type: slika_mixed
+    enabled: true
+  -
+    sirina: full
+    slika: k8-sWEpcc0Rm0U-unsplash.jpg
+    type: novice
     enabled: true
 ---
