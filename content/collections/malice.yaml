@@ -1,0 +1,12 @@
+title: Malice
+template: base/layout
+layout: base/layout
+revisions: false
+title_format: 'Malica za {{ date format="m-d" }}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: private
+  future: public
+structure:
+  root: false
