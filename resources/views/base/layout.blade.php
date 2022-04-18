@@ -27,7 +27,6 @@
   @include('parts.header')
 
   <div>{{ $title }}</div>
-  <div>{!! $content !!}</div>
 
   {{-- @foreach ($pb as $block)
       @include('pb.' . $block['type'])

@@ -1,1 +1,4 @@
 title: 'Delovni cas'
+data:
+  working_days: 'Od ponedeljka do sobote:'
+  working_hours: '8:00 - 22:00'

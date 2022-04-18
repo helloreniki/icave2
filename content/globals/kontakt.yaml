@@ -1,1 +1,7 @@
 title: Kontakt
+data:
+  company_name: 'The Cave'
+  address: 'Turopolje 6'
+  post: '8310 Sentjernej'
+  phone_number: 041-777-775
+  email: thecave@example.com
