@@ -1,0 +1,520 @@
+title: Pages
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: pb
+        field:
+          collapse: false
+          sets:
+            malica_danes:
+              display: 'Malica danes'
+              fields: {  }
+            malice_ta_teden:
+              display: 'Malice ta teden'
+              fields: {  }
+            slika_in_tekst:
+              display: 'Slika in tekst'
+              fields:
+                -
+                  handle: slika
+                  field:
+                    mode: list
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    display: Slika
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    container: images
+                    max_files: 2
+                -
+                  handle: naslov
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Naslov
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: podnaslov
+                  field:
+                    antlers: false
+                    display: Podnaslov
+                    type: textarea
+                    icon: textarea
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: tekst
+                  field:
+                    antlers: false
+                    display: Tekst
+                    type: textarea
+                    icon: textarea
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: swap
+                  field:
+                    default: false
+                    display: Swap
+                    type: toggle
+                    icon: toggle
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: alineje
+                  field:
+                    display: Alineje
+                    type: list
+                    icon: list
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: markdown
+                  field:
+                    container: images
+                    restrict: false
+                    automatic_line_breaks: true
+                    automatic_links: false
+                    escape_markup: false
+                    smartypants: false
+                    antlers: false
+                    display: Markdown
+                    type: markdown
+                    icon: markdown
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: barva_ozadja
+                  field: common.colors
+                  config:
+                    options:
+                      beige: beige
+                      grayish: 'medium gray'
+                      white: white
+                      gray-900/90: 'dark gray'
+                    display: 'Barva ozadja'
+                    default: beige
+            slika_banner:
+              display: 'Slika banner'
+              fields:
+                -
+                  handle: slika
+                  field:
+                    mode: list
+                    container: images
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: Slika
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: sirina
+                  field:
+                    options:
+                      full: 'Polna sirina slike'
+                      container: 'Container slika'
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    taggable: false
+                    push_tags: false
+                    cast_booleans: false
+                    default: full
+                    display: Sirina
+                    type: select
+                    icon: select
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: visina
+                  field:
+                    options:
+                      nizka: nizka
+                      srednja: srednja
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    taggable: false
+                    push_tags: false
+                    cast_booleans: false
+                    default: nizka
+                    display: Visina
+                    type: select
+                    icon: select
+                    listable: hidden
+                    instructions_position: above
+            slika_grid:
+              display: 'Slika grid'
+              fields:
+                -
+                  handle: slike
+                  field:
+                    mode: list
+                    container: images
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    display: Slike
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: stolpci
+                  field:
+                    options:
+                      1: null
+                      2: null
+                      3: null
+                      4: null
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    taggable: false
+                    push_tags: false
+                    cast_booleans: false
+                    display: Stolpci
+                    type: select
+                    icon: select
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: gap
+                  field:
+                    options:
+                      0: 'brez gapa'
+                      4: s
+                      8: m
+                      12: l
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    taggable: false
+                    push_tags: false
+                    cast_booleans: false
+                    display: Gap
+                    type: select
+                    icon: select
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: sirina
+                  field:
+                    options:
+                      full: 'Polna sirina'
+                      container: Container
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    taggable: false
+                    push_tags: false
+                    cast_booleans: false
+                    display: Sirina
+                    type: select
+                    icon: select
+                    listable: hidden
+                    instructions_position: above
+            novice:
+              display: Novice
+              fields:
+                -
+                  handle: sirina
+                  field:
+                    options:
+                      full: 'Polna sirina'
+                      container: Container
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    taggable: false
+                    push_tags: false
+                    cast_booleans: false
+                    default: full
+                    display: Sirina
+                    type: select
+                    icon: select
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: slika
+                  field:
+                    mode: list
+                    container: images
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: Slika
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+            jedilni_list:
+              display: 'Jedilni list'
+              fields:
+                -
+                  handle: jedilni_list
+                  field:
+                    fields:
+                      -
+                        handle: skupina_jedi
+                        field:
+                          fields:
+                            -
+                              handle: ime_skupine_jedi
+                              field:
+                                input_type: text
+                                antlers: false
+                                display: 'Ime skupine jedi'
+                                type: text
+                                icon: text
+                                listable: hidden
+                                instructions_position: above
+                                width: 25
+                            -
+                              handle: jed
+                              field:
+                                fields:
+                                  -
+                                    handle: ime_jedi
+                                    field:
+                                      input_type: text
+                                      antlers: false
+                                      display: 'Ime jedi'
+                                      type: text
+                                      icon: text
+                                      listable: hidden
+                                      instructions_position: above
+                                  -
+                                    handle: cena_jedi
+                                    field:
+                                      display: 'Cena jedi'
+                                      type: float
+                                      icon: float
+                                      listable: hidden
+                                      instructions_position: above
+                                      width: 25
+                                  -
+                                    handle: alergeni
+                                    field:
+                                      input_type: text
+                                      antlers: false
+                                      display: Alergeni
+                                      type: text
+                                      icon: text
+                                      listable: hidden
+                                      instructions_position: above
+                                      width: 25
+                                  -
+                                    handle: sestavine
+                                    field:
+                                      input_type: text
+                                      antlers: false
+                                      display: Sestavine
+                                      type: text
+                                      icon: text
+                                      listable: hidden
+                                      instructions_position: above
+                                mode: table
+                                reorderable: true
+                                display: Jed
+                                type: grid
+                                icon: grid
+                                listable: hidden
+                                instructions_position: above
+                          mode: table
+                          reorderable: true
+                          display: 'Skupina jedi'
+                          type: grid
+                          icon: grid
+                          listable: hidden
+                          instructions_position: above
+                    mode: table
+                    reorderable: true
+                    display: 'Jedilni list'
+                    type: grid
+                    icon: grid
+                    listable: hidden
+                    instructions_position: above
+            slika_mixed:
+              display: 'Slika mixed'
+              fields:
+                -
+                  handle: slike
+                  field:
+                    fields:
+                      -
+                        handle: slika
+                        field:
+                          mode: list
+                          restrict: false
+                          allow_uploads: true
+                          show_filename: true
+                          max_files: 1
+                          display: Slika
+                          type: assets
+                          icon: assets
+                          listable: hidden
+                          instructions_position: above
+                      -
+                        handle: velikost_slike
+                        field:
+                          options:
+                            col-span-2: 'cez 2 stolpca'
+                            row-span-2: 'cez 2 vrstici'
+                          multiple: false
+                          clearable: false
+                          searchable: true
+                          taggable: false
+                          push_tags: false
+                          cast_booleans: false
+                          display: 'Velikost slike'
+                          type: select
+                          icon: select
+                          listable: hidden
+                          instructions_position: above
+                    mode: table
+                    reorderable: true
+                    display: Slike
+                    type: grid
+                    icon: grid
+                    listable: hidden
+                    instructions_position: above
+                    add_row: 'Dodaj sliko'
+            tekst:
+              display: Tekst
+              fields: {  }
+          display: 'Page Builder'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: date
+        field:
+          type: date
+          validate:
+            - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+  header:
+    display: Header
+    fields:
+      -
+        handle: nadnaslov
+        field:
+          input_type: text
+          antlers: false
+          display: Nadnaslov
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: naslov
+        field:
+          input_type: text
+          antlers: false
+          display: Naslov
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: podnaslov
+        field:
+          antlers: false
+          display: Podnaslov
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+      -
+        handle: slika_ozadja
+        field:
+          mode: list
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          display: 'Slika ozadja'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          max_files: 1
+      -
+        handle: bg_color
+        field: common.colors
+        config:
+          options:
+            gold: gold
+            beige: beige
+            gray-900: 'dark grey'
+            white: white
+            '': null
+          display: 'Bg color'
+          unless:
+            slika_ozadja: '!== empty'
+      -
+        handle: text_color
+        field: common.colors
+        config:
+          display: 'Text color'
+      -
+        handle: gumb
+        field:
+          fields:
+            -
+              handle: link
+              field: common.link
+            -
+              handle: tekst
+              field:
+                input_type: text
+                antlers: false
+                display: Tekst
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+          mode: table
+          reorderable: true
+          display: Gumb
+          type: grid
+          icon: grid
+          listable: hidden
+          instructions_position: above

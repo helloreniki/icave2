@@ -1,0 +1,24 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: working_days
+        field:
+          input_type: text
+          antlers: false
+          display: 'working days'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: working_hours
+        field:
+          input_type: text
+          antlers: false
+          display: 'working hours'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above

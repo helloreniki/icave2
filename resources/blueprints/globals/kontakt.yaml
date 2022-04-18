@@ -1,0 +1,54 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: company_name
+        field:
+          input_type: text
+          antlers: false
+          display: 'Company Name'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: address
+        field:
+          input_type: text
+          antlers: false
+          display: Address
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: post
+        field:
+          input_type: text
+          antlers: false
+          display: Post
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: phone_number
+        field:
+          input_type: text
+          antlers: false
+          display: 'Phone Number'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: email
+        field:
+          input_type: text
+          antlers: false
+          display: Email
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
