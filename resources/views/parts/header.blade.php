@@ -1,10 +1,10 @@
 @php
 //  dump($gumb->value()[0]['tekst']);
 //   echo('new line');
-//  dd($gumb);
+//  dd($page->gumb[0]);
 // dd($text_color->value()->value());
 @endphp
-{{-- @include('parts.menu') --}}
+@include('parts.menu')
 
 <div class="w-full relative z-0 @if(! $slika_ozadja) bg-{{$bg_color->value() }} @endif">
 
