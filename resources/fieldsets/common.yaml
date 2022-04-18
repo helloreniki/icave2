@@ -27,9 +27,9 @@ fields:
       collections:
         - pages
         - malice
-        - jedilni_list
       display: Link
       type: link
       icon: link
       listable: hidden
       instructions_position: above
+      read_only: false
