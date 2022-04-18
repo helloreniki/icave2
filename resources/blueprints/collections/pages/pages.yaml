@@ -37,7 +37,8 @@ sections:
                     listable: hidden
                     instructions_position: above
                     container: images
-                    max_files: 2
+                    max_files: 1
+                    read_only: false
                 -
                   handle: naslov
                   field:
@@ -408,6 +409,7 @@ sections:
           icon: replicator
           listable: hidden
           instructions_position: above
+          read_only: false
   sidebar:
     display: Sidebar
     fields:
