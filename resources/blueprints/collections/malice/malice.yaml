@@ -42,6 +42,7 @@ sections:
                 icon: assets
                 listable: hidden
                 instructions_position: above
+                width: 50
           mode: table
           add_row: 'Dodaj malico'
           reorderable: true
@@ -50,6 +51,7 @@ sections:
           icon: grid
           listable: hidden
           instructions_position: above
+          read_only: false
   sidebar:
     display: Sidebar
     fields:
@@ -60,4 +62,18 @@ sections:
           required: true
           validate:
             - required
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - malice
+          max_items: 1
+          listable: false
+          localizable: true
 title: Malice
