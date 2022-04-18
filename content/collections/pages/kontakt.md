@@ -4,4 +4,7 @@ blueprint: pages
 title: Kontakt
 updated_by: 1
 updated_at: 1650275206
+naslov: Kontakt
+bg_color: beige
+text_color: blackish
 ---

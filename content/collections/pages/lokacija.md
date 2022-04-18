@@ -4,4 +4,7 @@ blueprint: pages
 title: Lokacija
 updated_by: 1
 updated_at: 1650275213
+naslov: Lokacija
+slika_ozadja: chesley-mccarty-ZimlF1xeZ8k-unsplash.jpg
+text_color: beige
 ---
