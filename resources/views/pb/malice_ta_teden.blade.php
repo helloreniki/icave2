@@ -2,8 +2,8 @@
   $today = Carbon\CarbonImmutable::now();
   $startOfWeek = $today->startOFWeek();
   $endOfWeek = $today->endOfWeek();
-  $malice_ta_teden = Statamic::tag('collection:malice')
-      ->where('date', '>=', $startOfWeek)->where('date', '<', $endOfWeek)->orderBy('date')->fetch();
+  $malice_ta_teden = \Statamic\Facades\Entry::query()->where('collection', 'malice')
+      ->where('date', '>=', $startOfWeek)->where('date', '<', $endOfWeek)->orderBy('date')->get();
 @endphp
 
 <div class="max-w-7xl mx-auto py-24 px-8 text-center">

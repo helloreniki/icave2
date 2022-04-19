@@ -9,7 +9,8 @@
       <div class="hidden xs:inline-block">
         <div class="flex space-x-4 md:space-x-8 items-center">
           {{-- https://statamic.dev/tags/collection#parameters --}}
-          @foreach (Statamic::tag('collection:pages')->sort('order') as $entry)
+          {{-- @dd(Statamic::tag('collection:pages')->fetch()->toArray()) --}}
+          @foreach (Statamic::tag('collection:pages')->sort('order')->fetch() as $entry)
           <div>
               <a href="{{ $entry->url() }}" class="text-sm sm:text-base tracking-wider {{ $entry->title === 'Domov' ? 'hidden sm:inline' : ''}} {{ $entry->url() == $pg['url'] ? 'font-bold text-gold border-b-4 border-gold py-1' : '' }} ">
                   {{ $entry->title }}

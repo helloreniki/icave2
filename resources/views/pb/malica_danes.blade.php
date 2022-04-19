@@ -1,13 +1,12 @@
 @php
-  $danasnje_malice=\Statamic::tag('collection:malice')->where('date', $today)->where('published', true)->fetch();
-  // dd($today);
-  // dd($danasnje_malice);
-
+  $today = \Carbon\Carbon::now();
+  $malica_danes = \Statamic\Facades\Entry::query()->where('collection', 'malice')->where('date', $today)->get();
+  // dd($malica_danes);
 @endphp
 
 <div id="danasnja-ponudba" class="max-w-7xl mx-auto py-16 md:py-24 px-8 text-center">
   <div class="font-special text-5xl sm:text-7xl text-gold tracking-wide mb-12 sm:mb-16">Danasnja ponudba</div>
-    @forelse($danasnje_malice as $entry)
+    @forelse($malica_danes as $entry)
       <div class="text-2xl sm:text-3xl font-semibold mb-16 capitalize">{{ $entry->date()->locale('sl')->dayName }}, {{ $entry->date()->format('d.m.Y') }} </div>
       <div class="block space-y-4 sm:space-y-0 mx-auto max-w-md sm:max-w-none sm:flex sm:gap-6 sm:justify-center">
         @foreach ($entry->malice_za_danes as $o)
