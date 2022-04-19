@@ -1,0 +1,102 @@
+sections:
+  jedilnik:
+    display: Jedilnik
+    fields:
+      -
+        handle: kategorije
+        field:
+          fields:
+            -
+              handle: kategorija
+              field:
+                input_type: text
+                antlers: false
+                display: Kategorija
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                read_only: false
+            -
+              handle: jedi
+              field:
+                fields:
+                  -
+                    handle: ime_jedi
+                    field:
+                      input_type: text
+                      antlers: false
+                      display: 'Ime jedi'
+                      type: text
+                      icon: text
+                      listable: hidden
+                      instructions_position: above
+                      read_only: false
+                      width: 50
+                  -
+                    handle: mala_in_velika
+                    field:
+                      default: false
+                      display: 'Mala in velika?'
+                      type: toggle
+                      icon: toggle
+                      width: 25
+                      listable: hidden
+                      instructions_position: above
+                      read_only: false
+                  -
+                    handle: cena_mala
+                    field:
+                      display: 'Cena mala'
+                      type: float
+                      icon: float
+                      width: 33
+                      listable: hidden
+                      instructions_position: above
+                      read_only: false
+                      instructions: 'Vpisite to, ce je samo ena cena'
+                      if:
+                        'Mala in velika?': 'equals true'
+                  -
+                    handle: cena_velika
+                    field:
+                      display: 'Cena velika'
+                      type: float
+                      icon: float
+                      width: 33
+                      listable: hidden
+                      instructions_position: above
+                      read_only: false
+                      if:
+                        'Mala in velika?': 'equals true'
+                  -
+                    handle: cena
+                    field:
+                      display: Cena
+                      type: float
+                      icon: float
+                      listable: hidden
+                      instructions_position: above
+                      read_only: false
+                      unless:
+                        'Mala in velika?': 'equals true'
+                mode: table
+                reorderable: true
+                display: Jedi
+                type: grid
+                icon: grid
+                listable: hidden
+                instructions_position: above
+                read_only: false
+                add_row: 'Dodaj jed'
+                if:
+                  'Mala in velika?': 'equals true'
+          mode: stacked
+          add_row: 'Dodaj kategorijo'
+          reorderable: true
+          display: Kategorije
+          type: grid
+          icon: grid
+          listable: hidden
+          instructions_position: above
+          read_only: false
