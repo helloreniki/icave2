@@ -3,7 +3,7 @@ id: a8895c33-3054-4260-ba6e-0c9a5dd266c9
 blueprint: pages
 title: Domov
 updated_by: 1
-updated_at: 1650391897
+updated_at: 1650728179
 header: 'The CAVE'
 subheader: 'Domaci okusi, ki vas bodo navdusili. Vabljeni!'
 bg_image: mike-PxJ9zkM2wdA-unsplash.jpg
@@ -21,21 +21,6 @@ gumb:
     tekst: 'Danasnja ponudba'
 pb:
   -
-    slika: chris-liverani-oCsaxvGCehM-unsplash-(1).jpg
-    sirina: full
-    visina: srednja
-    type: slika_banner
-    enabled: true
-  -
-    type: jedilni_list
-    enabled: true
-  -
-    type: malice_ta_teden
-    enabled: true
-  -
-    type: malica_danes
-    enabled: true
-  -
     slika: jonathan-borba-uB7q7aipU2o-unsplash.jpg
     naslov: 'Dobrodosli pri nas'
     podnaslov: 'Vabimo vas na okusne malice ali le pijačo s prijatelji.'
@@ -47,6 +32,35 @@ pb:
       **031883303**
     barva_ozadja: beige
     type: slika_in_tekst
+    enabled: true
+  -
+    slika: chris-liverani-oCsaxvGCehM-unsplash-(1).jpg
+    naslov: 'NOVO V PONUDBI !!!'
+    podnaslov: 'Piscancji burger v sezamovi bombetki'
+    swap: false
+    alineje:
+      - 'sezamova bombetka piscancji'
+      - 'piscancji dunajski'
+      - rozika
+      - 'zelena solata'
+      - paradiznik
+    barva_ozadja: beige
+    type: slika_in_tekst
+    enabled: true
+    markdown: 'Dober tek.'
+  -
+    type: malica_danes
+    enabled: true
+  -
+    type: malice_ta_teden
+    enabled: true
+  -
+    sirina: full
+    slika: k8-sWEpcc0Rm0U-unsplash.jpg
+    type: novice
+    enabled: true
+  -
+    type: jedilni_list
     enabled: true
   -
     slike:
@@ -91,26 +105,16 @@ pb:
       -
         slika: miti-qYreP9QOdrk-unsplash.jpg
         velikost_slike: col-span-2
+      -
+        slika: abstract6.jpg
+      -
+        slika: abstract7.jpg
     type: slika_mixed
     enabled: true
   -
-    sirina: full
-    slika: k8-sWEpcc0Rm0U-unsplash.jpg
-    type: novice
-    enabled: true
-  -
     slika: chris-liverani-oCsaxvGCehM-unsplash-(1).jpg
-    naslov: 'NOVO V PONUDBI !!!'
-    podnaslov: 'Piscancji burger v sezamovi bombetki'
-    swap: false
-    alineje:
-      - 'sezamova bombetka piscancji'
-      - 'piscancji dunajski'
-      - rozika
-      - 'zelena solata'
-      - paradiznik
-    barva_ozadja: beige
-    type: slika_in_tekst
+    sirina: full
+    visina: srednja
+    type: slika_banner
     enabled: true
-    markdown: 'Dober tek.'
 ---

@@ -4,6 +4,10 @@
   $endOfWeek = $today->endOfWeek();
   $malice_ta_teden = \Statamic\Facades\Entry::query()->where('collection', 'malice')
       ->where('date', '>=', $startOfWeek)->where('date', '<', $endOfWeek)->orderBy('date')->get();
+  dump($type_previous);
+  dump($type_current);
+  dump($type_next);
+  dump($types);
 @endphp
 
 <div class="max-w-7xl mx-auto py-24 px-8 text-center">

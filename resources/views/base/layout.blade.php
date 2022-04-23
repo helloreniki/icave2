@@ -25,9 +25,25 @@
 </head>
 <body class="font-sans">
 
+
   @include('parts.header')
 
+  @php
+    $types = [];
+    foreach ($pb as $block) {
+      $types[] = $block['type'];
+    }
+    $type_counter = 0;
+  @endphp
+
   @foreach ($pb as $block)
+      @php
+          // $types[] = $block['type']; // arr of all block types on the page, already done in loop above
+          $type_current = $block['type']; // or $types[$block_counter];
+          $type_previous = $types[$type_counter - 1] ?? false;
+          $type_next = $types[$type_counter + 1] ?? false;
+          $type_counter++;
+      @endphp
       @include('pb.' . $block['type'])
   @endforeach
 
