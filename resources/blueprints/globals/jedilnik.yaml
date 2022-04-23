@@ -7,11 +7,11 @@ sections:
         field:
           fields:
             -
-              handle: kategorija
+              handle: ime_kategorije
               field:
                 input_type: text
                 antlers: false
-                display: Kategorija
+                display: 'Ime kategorije'
                 type: text
                 icon: text
                 listable: hidden
@@ -32,7 +32,30 @@ sections:
                       listable: hidden
                       instructions_position: above
                       read_only: false
-                      width: 50
+                  -
+                    handle: sestavine
+                    field:
+                      input_type: text
+                      antlers: false
+                      display: Sestavine
+                      type: text
+                      icon: text
+                      listable: hidden
+                      instructions_position: above
+                      read_only: false
+                      width: 75
+                  -
+                    handle: alergeni
+                    field:
+                      input_type: text
+                      antlers: false
+                      display: Alergeni
+                      type: text
+                      icon: text
+                      width: 25
+                      listable: hidden
+                      instructions_position: above
+                      read_only: false
                   -
                     handle: mala_in_velika
                     field:
@@ -54,9 +77,8 @@ sections:
                       listable: hidden
                       instructions_position: above
                       read_only: false
-                      instructions: 'Vpisite to, ce je samo ena cena'
                       if:
-                        'Mala in velika?': 'equals true'
+                        mala_in_velika: 'equals true'
                   -
                     handle: cena_velika
                     field:
@@ -68,7 +90,7 @@ sections:
                       instructions_position: above
                       read_only: false
                       if:
-                        'Mala in velika?': 'equals true'
+                        mala_in_velika: 'equals true'
                   -
                     handle: cena
                     field:
@@ -79,8 +101,9 @@ sections:
                       instructions_position: above
                       read_only: false
                       unless:
-                        'Mala in velika?': 'equals true'
-                mode: table
+                        mala_in_velika: 'equals true'
+                      width: 33
+                mode: stacked
                 reorderable: true
                 display: Jedi
                 type: grid
@@ -89,8 +112,6 @@ sections:
                 instructions_position: above
                 read_only: false
                 add_row: 'Dodaj jed'
-                if:
-                  'Mala in velika?': 'equals true'
           mode: stacked
           add_row: 'Dodaj kategorijo'
           reorderable: true
