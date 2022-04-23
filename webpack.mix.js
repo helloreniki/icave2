@@ -35,7 +35,7 @@ const mix = require('laravel-mix');
    // reloadDelay: 500, // wait one second before reloading
    ghostMode: true, // switch all sync off (clicks, forms, scroll)
    reloadOnRestart: true, // reload all browsers on restart
-   host: "192.168.1.10", // if you know your url already
+   host: "192.168.8.103", // if you know your url already
    notify: false, // no grey box notifications
    ui: false, // disable 3001 ui page
    online: true, // if you know you have internet connection
