@@ -7,17 +7,17 @@
 @endphp
 
 <div class="max-w-7xl mx-auto py-24 px-8 text-center">
-  <div class="font-special text-7xl text-gold tracking-wide mb-16">Malice ta teden</div>
+  <div class="font-special text-5xl xs:text-7xl text-gold tracking-wide mb-16">Malice ta teden</div>
 
-      <div class="flex gap-6 justify-center">
+      <div class="flex flex-wrap gap-6 justify-center">
         @forelse ($malice_ta_teden as $entry)
           {{-- @php dd($entry); @endphp --}}
-          <div class="malica w-1/5 border border-gold/50 shadow-md hover:shadow-lg hover:bg-beige">
+          <div class="malica w-56 border border-gold/50 shadow-md hover:shadow-lg hover:bg-beige py-3 ">
             <h3 class="px-4 py-3 text-lg font-semibold text-gold">{{ $entry->date()->locale('sl')->dayName }}, {{ $entry->date()->format('d.m.Y') }}</h3>
             @foreach ($entry->malice_za_danes as $obrok)
                 {{-- @php dd($obrok->malica); @endphp --}}
-              <div class="py-6 px-4">
-                <p class="mb-1">{{ $obrok['malica'] }}</p>
+              <div class="py-2 xs:py-6 px-4">
+                <p class="mb-1 font-semibold">{{ $obrok['malica'] }}</p>
                 <p>{{ $obrok['cena'] }} evrov</p>
               </div>
               @if($loop->last) <span></span>@else<div>. . .</div>@endif
@@ -32,3 +32,4 @@
 
 
 {{-- orderBy, pokazi ze v nedeljo --}}
+{{-- min-w-fit  in brez w-56, razlicno siroki, glede na vsebino --}}
