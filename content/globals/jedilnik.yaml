@@ -1,1 +1,57 @@
 title: Jedilnik
+data:
+  kategorije:
+    -
+      ime_kategorije: Pizze
+      jedi:
+        -
+          ime_jedi: Klasik
+          sestavine: 'pelati, šunka, sir, gobice'
+          alergeni: '1,7'
+          mala_in_velika: true
+          cena_mala: 6.0
+          cena_velika: 7.0
+        -
+          ime_jedi: Kmečka
+          sestavine: 'pelati, domača salama, klobasa, sir'
+          alergeni: '1,7'
+          mala_in_velika: true
+          cena_mala: 6.0
+          cena_velika: 7.0
+        -
+          ime_jedi: Tunina
+          sestavine: 'pelati, tuna, čebula, koruza, sir'
+          alergeni: '2,5,6'
+          mala_in_velika: true
+          cena_mala: 6.5
+          cena_velika: 7.5
+        -
+          ime_jedi: Vegetarijanska
+          sestavine: 'pelati, sir, paradižnik, bučke, paprika, olive, koruza'
+          alergeni: '1,7'
+          mala_in_velika: true
+          cena_mala: 6.0
+          cena_velika: 7.0
+    -
+      ime_kategorije: 'Ostala ponudba'
+      jedi:
+        -
+          ime_jedi: Hamburger
+          sestavine: 'lepinja, pleskavica, cebula, ajvar, paradiznik, solata'
+          alergeni: '1,7'
+          mala_in_velika: false
+          cena: 4.0
+        -
+          ime_jedi: Kebab
+          sestavine: 'piscanec, zelje, omaka, paradiznik'
+          alergeni: '1,7'
+          mala_in_velika: false
+          cena: 5.0
+        -
+          ime_jedi: 'Dnevna malica'
+          mala_in_velika: false
+          cena: 6.0
+        -
+          ime_jedi: 'Polovična malica'
+          mala_in_velika: false
+          cena: 4.0
