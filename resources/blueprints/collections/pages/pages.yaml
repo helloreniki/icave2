@@ -203,9 +203,9 @@ sections:
                   field:
                     options:
                       0: 'brez gapa'
+                      2: xs
                       4: s
                       8: m
-                      12: l
                     multiple: false
                     clearable: false
                     searchable: true
@@ -217,6 +217,7 @@ sections:
                     icon: select
                     listable: hidden
                     instructions_position: above
+                    read_only: false
                 -
                   handle: sirina
                   field:

@@ -2,7 +2,7 @@
     // dd($jedilnik->kategorije)
 @endphp
 
-<div class="max-w-5xl mx-auto py-24 px-16 text-center bg-beige my-4">
+<div class="max-w-5xl mx-auto py-24 px-16 text-center bg-beige">
   <h2 class="font-special text-5xl xs:text-7xl text-gold mb-6 xs:mb-12 py-2 text-center">Jedilni list</h2>
 
   <div class="space-y-16" x-data="{ trenutnaJed: '' }">
