@@ -2,14 +2,14 @@
     // dd($jedilnik->kategorije)
 @endphp
 
-<div class="max-w-5xl mx-auto py-24 px-16 text-center bg-beige">
+<div class="max-w-5xl mx-auto py-16 sm:py-24 px-4 xs:px-8 sm:px-16 text-center bg-beige">
   <h2 class="font-special text-5xl xs:text-7xl text-gold mb-6 xs:mb-12 py-2 text-center">Jedilni list</h2>
 
   <div class="space-y-16" x-data="{ trenutnaJed: '' }">
     @foreach ($jedilnik->kategorije as $kategorija)
-      <div class="">
+      <div id="kategorija" class="">
         <h2 class="font-special text-4xl xs:text-6xl text-gold mb-8 py-2 col-span-12 text-center">{{ $kategorija->ime_kategorije }}</h2>
-        <div class="grid grid-cols-12 space-y-4">
+        <div  class="grid grid-cols-12 space-y-4">
           <div class="col-span-8 sm:col-span-10"></div>
           @if($kategorija->ime_kategorije == 'Pizze')
             <div class="mb-4 col-span-2 sm:col-span-1">Mala</div>
@@ -44,3 +44,19 @@
 
 
 </div>
+
+<script>
+
+gsap.from("#kategorija", {
+        duration:2,
+        opacity:0,
+        // scale:0.8,
+        ease:"linear",
+        scrollTrigger:{
+          trigger:"#kategorija",
+          markers: false,
+          toggleActions: "restart none none none"
+        }
+      })
+
+</script>
