@@ -16,6 +16,7 @@
   <link rel="preload" as="font" type="font/woff2" href="{{ url('/') }}/fonts/lato-v22-latin-ext_latin-regular.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="{{ url('/') }}/fonts/parisienne-v12-latin-ext_latin-regular.woff2" crossorigin>
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+  @include('base.gsap')
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <style>
@@ -50,4 +51,5 @@
   @include('parts.footer')
 
 </body>
+
 </html>
