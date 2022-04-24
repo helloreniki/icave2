@@ -16,7 +16,7 @@
       <div class="flex flex-wrap gap-6 justify-center">
         @forelse ($malice_ta_teden as $entry)
           {{-- @php dd($entry); @endphp --}}
-          <div class="malica w-56 border border-gold/50 shadow-md hover:shadow-lg hover:bg-beige py-3 ">
+          <div class="malica will-change-transform w-56 border border-gold/50 shadow-md hover:shadow-lg hover:bg-beige py-3 ">
             <h3 class="px-4 py-3 text-lg font-semibold text-gold">{{ $entry->date()->locale('sl')->dayName }}, {{ $entry->date()->format('d.m.Y') }}</h3>
             @foreach ($entry->malice_za_danes as $obrok)
                 {{-- @php dd($obrok->malica); @endphp --}}
@@ -33,6 +33,23 @@
       </div>
 
 </div>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger)
+
+  gsap.from(".malica", {
+        duration:1.5,
+        opacity:0,
+        // scale:0.8,
+        ease:"linear",
+        stagger:0.2,
+        scrollTrigger:{
+          trigger:".malica",
+          markers: false,
+          toggleActions: "restart none none none"
+        }
+      })
+  </script>
 
 
 {{-- orderBy, pokazi ze v nedeljo --}}
