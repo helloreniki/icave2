@@ -3,7 +3,7 @@ id: a8895c33-3054-4260-ba6e-0c9a5dd266c9
 blueprint: pages
 title: Domov
 updated_by: 1
-updated_at: 1650728179
+updated_at: 1650788081
 header: 'The CAVE'
 subheader: 'Domaci okusi, ki vas bodo navdusili. Vabljeni!'
 bg_image: mike-PxJ9zkM2wdA-unsplash.jpg
@@ -32,6 +32,21 @@ pb:
       **031883303**
     barva_ozadja: beige
     type: slika_in_tekst
+    enabled: true
+  -
+    slike:
+      -
+        slika: jakub-kapusnak-4f4YZfDMLeU-unsplash.jpg
+      -
+        slika: jonathan-borba-uB7q7aipU2o-unsplash.jpg
+      -
+        slika: alex-haney-CAhjZmVk5H4-unsplash-(1).jpg
+      -
+        slika: alex-haney-CAhjZmVk5H4-unsplash-(1).jpg
+        velikost_slike: col-span-2
+      -
+        slika: jonathan-borba-uB7q7aipU2o-unsplash.jpg
+    type: slika_mixed
     enabled: true
   -
     slika: chris-liverani-oCsaxvGCehM-unsplash-(1).jpg
