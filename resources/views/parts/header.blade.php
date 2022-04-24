@@ -43,6 +43,6 @@
     tl_h.from("#naslov", { duration:1, y:-50, scale:0.8, ease:"power1.out" }, 0.5)
         .from("#nadnaslov", { duration:2, y:20 }, "-=0.5")
         .from("#podnaslov", { duration:1, y:-40 }, "-=1.5")
-        .from("#gumb", { duration:1.3, ease:"linear" }, "-=1.3")
+        .from("#gumb", { duration:1, ease:"linear" }, "-=2")
 
   </script>

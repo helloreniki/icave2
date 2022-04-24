@@ -1,4 +1,4 @@
-<div id="tekst" class="flex flex-col items-center px-0 md:px-8 space-y-2 md:space-y-4 text-center md:my-8">
+<div id="tekst" class="flex flex-col items-center px-0 md:px-4 space-y-2 md:space-y-4 text-center md:my-8">
   <div class="text-gold text-xl sm:text-2xl lg:text-4xl sm:mb-4 lg:mb-6">{{ $block['naslov'] }}</div>
   <div class="@if($block['barva_ozadja']->value() == 'gray-900/90') text-gold @endif">
     @if($block['podnaslov'])<div class="text-sm sm:text-lg lg:text-2xl font-semibold mt-2 mb-6">{{ $block['podnaslov'] }}</div>@endif
