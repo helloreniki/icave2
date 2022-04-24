@@ -300,7 +300,7 @@ sections:
                             col-span-2: 'cez 2 stolpca'
                             row-span-2: 'cez 2 vrstici'
                           multiple: false
-                          clearable: false
+                          clearable: true
                           searchable: true
                           taggable: false
                           push_tags: false
@@ -310,6 +310,8 @@ sections:
                           icon: select
                           listable: hidden
                           instructions_position: above
+                          read_only: false
+                          max_items: 1
                     mode: table
                     reorderable: true
                     display: Slike
@@ -318,6 +320,7 @@ sections:
                     listable: hidden
                     instructions_position: above
                     add_row: 'Dodaj sliko'
+                    read_only: false
             tekst:
               display: Tekst
               fields: {  }
@@ -399,13 +402,9 @@ sections:
         handle: bg_color
         field: common.colors
         config:
-          options:
-            gold: gold
-            beige: beige
-            gray-900: 'dark grey'
-            white: white
-            '': null
+          clearable: true
           display: 'Bg color'
+          max_items: 1
           unless:
             slika_ozadja: '!== empty'
       -

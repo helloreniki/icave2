@@ -9,7 +9,7 @@ fields:
         grayish: 'medium gray'
         white: white
         blackish: black
-        gray-900: 'dark gray'
+        gray-900/90: 'dark gray'
       multiple: false
       clearable: false
       searchable: true
@@ -21,6 +21,7 @@ fields:
       icon: select
       listable: hidden
       instructions_position: above
+      read_only: false
   -
     handle: link
     field:

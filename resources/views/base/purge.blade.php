@@ -8,6 +8,7 @@ bg-beige
 bg-gold
 bg-grayish
 bg-gray-900/90
+bg-gray-900
 bg-white
 
 gap-12

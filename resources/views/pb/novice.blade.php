@@ -1,4 +1,4 @@
-<div class="relative z-0 {{ $block['sirina'] == 'container' ? 'max-w-7xl mx-auto mb-8' : ''}} py-24 px-8 text-center bg-beige {{$block['slika'] ? 'text-white' : ''}}">
+<div class="relative z-0 {{ $block['sirina'] == 'container' ? 'max-w-7xl mx-auto' : ''}} py-24 px-8 text-center bg-beige {{$block['slika'] ? 'text-white' : ''}}">
 
   <div class="relative z-20">
     <div class="font-special text-gold text-3xl xs:text-4xl sm:text-5xl mb-8">Se zelite narociti na tedensko ponudbo malic?</div>

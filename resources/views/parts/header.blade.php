@@ -6,8 +6,8 @@
 @endphp
 @include('parts.menu')
 
-<div class="w-full relative z-0 @if(! $slika_ozadja) bg-{{$page->bg_color }} @endif">
-
+<div class="w-full relative z-0  @if(! $page->slika_ozadja) bg-{{$page->bg_color->value() }} @endif">
+  {{-- @dd($page->bg_color->value()) --}}
   <div class="relative z-10 py-32 sm:py-60 px-16 text-center">
     <div id="nadnaslov" class="will-change-transform font-special text-2xl xs:text-3xl sm:text-5xl text-gold">{{ $page->nadnaslov }}</div>
     <div id="naslov" class="will-change-transform text-4xl xs:text-6xl sm:text-8xl font-extrabold text-{{ $page->text_color->value() }} tracking-widest mb-12 mt-4 sm:mt-6">{{ $page->naslov }}</div>
