@@ -4,10 +4,6 @@
   $endOfWeek = $today->endOfWeek();
   $malice_ta_teden = \Statamic\Facades\Entry::query()->where('collection', 'malice')
       ->where('date', '>=', $startOfWeek)->where('date', '<', $endOfWeek)->orderBy('date')->get();
-  dump($type_previous);
-  dump($type_current);
-  dump($type_next);
-  dump($types);
 @endphp
 
 <div class="max-w-7xl mx-auto py-24 px-8 text-center">
@@ -17,12 +13,16 @@
         @forelse ($malice_ta_teden as $entry)
           {{-- @php dd($entry); @endphp --}}
           <div class="malica will-change-transform w-56 border border-gold/50 shadow-md hover:shadow-lg hover:bg-beige py-3 ">
-            <h3 class="px-4 py-3 text-lg font-semibold text-gold">{{ $entry->date()->locale('sl')->dayName }}, {{ $entry->date()->format('d.m.Y') }}</h3>
+            <div class="px-4 py-3 text-xl font-semibold text-gold">
+              <div>{{ $entry->date()->locale('sl')->dayName }}</div>
+              <div class="text-2xl">{{ $entry->date()->format('d.n.') }}</div>
+              {{-- <div class="text-2xl">{{ strtolower($entry->date()->format('d. F')) }}</div> --}}
+            </div>
             @foreach ($entry->malice_za_danes as $obrok)
                 {{-- @php dd($obrok->malica); @endphp --}}
               <div class="py-2 xs:py-6 px-4">
                 <p class="mb-1 font-semibold">{{ $obrok['malica'] }}</p>
-                <p>{{ $obrok['cena'] }} evrov</p>
+                <p>{{ $obrok['cena'] }} €</p>
               </div>
               @if($loop->last) <span></span>@else<div>. . .</div>@endif
             @endforeach
