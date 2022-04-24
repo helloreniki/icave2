@@ -25,7 +25,7 @@
         stagger:0.05,
         scrollTrigger:{
           trigger:".slika-{{$type_counter}}",
-          markers: true,
+          markers: false,
           toggleActions: "restart none none none"
         }
       })
