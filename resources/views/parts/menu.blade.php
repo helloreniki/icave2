@@ -10,10 +10,14 @@
         <div class="flex space-x-4 md:space-x-8 items-center">
           {{-- https://statamic.dev/tags/collection#parameters --}}
           {{-- @dd(Statamic::tag('collection:pages')->fetch()->toArray()) --}}
-          @foreach (Statamic::tag('collection:pages')->sort('order')->fetch() as $entry)
+          @foreach (Statamic::tag('nav:collection:pages')->params(['include_home' => true])->sort('order')->fetch() as $entry)
+          {{-- @dd($entry) --}}
+          {{-- @dd($entry['is_current']) --}}
+          {{-- @dd($entry['url']->value()) --}}
+          {{-- @dd($entry['title']->value()) --}}
           <div>
-              <a href="{{ $entry->url() }}" class="text-sm sm:text-base tracking-wider {{ $entry->title === 'Domov' ? 'hidden sm:inline' : ''}} {{ $entry->url() == $pg['url'] ? 'font-bold text-gold border-b-4 border-gold py-1' : '' }} ">
-                  {{ $entry->title }}
+              <a href="{{ $entry['url']->value() }}" class="text-sm sm:text-base tracking-wider {{ $entry['title']->value() === 'Domov' ? 'hidden sm:inline' : ''}} {{ $entry['is_current'] ? 'font-bold text-gold border-b-4 border-gold py-1' : '' }} ">
+                  {{ $entry['title']->value() }}
               </a>
           </div>
           @endforeach
