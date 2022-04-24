@@ -10,9 +10,43 @@
           // dd($slika);
       @endphp
 
-      <div class="slika overflow-hidden ">
+      <div class="slika-{{$type_counter}} will-change-transform overflow-hidden ">
         <img src="{{statamic_image($slika, ['w' => 1200, 'h' => 600] )}}" alt="" class="hover:scale-105 transition duration-800 ease-in-out  ">
       </div>
 
     @endforeach
   </div>
+
+  <script>
+    gsap.from(".slika-{{$type_counter}}", {
+        duration: {{ sizeof($block['slike']) * 0.33 }},
+        opacity:0.25,
+        ease:"power.out",
+        stagger:0.05,
+        scrollTrigger:{
+          trigger:".slika-{{$type_counter}}",
+          markers: true,
+          toggleActions: "restart none none none"
+        }
+      })
+
+  //ce vec istih blokcev na strani, put them in arr
+  // gsap.set('.slika', {opacity:0.25})
+  // gsap.utils.toArray(".slika").forEach(el => {
+  //   let tl_grid = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: el,
+  //       markers: false,
+  //       toggleActions: "restart none none none"
+  //     },
+  //     defaults: {
+
+  //     }
+  //   })
+
+  //   tl_grid.to(el, {opacity:1, duration:{{ sizeof($block['slike']) * 0.33 }} });
+
+  // });
+
+
+  </script>
