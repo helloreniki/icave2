@@ -8,7 +8,16 @@ module.exports = {
       "./resources/**/*.vue",
     ],
     theme: {
-      extend: {},
+      extend: {
+        typography: theme => ({
+          DEFAULT: {
+            css: {
+              a: { color: theme('colors.gold'), '&:hover': { color: theme('colors.gold'), opacity: 0.8 }, },
+              // strong: { color: theme('colors.gold'), fontWeight: '700' },
+            },
+          },
+        }),
+      },
       fontFamily: {
         sans: ['Lato', 'ui-sans-serif', 'Helvetica', 'sans-serif'], // 400 - regular, 700, 900
         special: ['Parisienne'], // 400 - regular
