@@ -3,7 +3,7 @@ id: a8895c33-3054-4260-ba6e-0c9a5dd266c9
 blueprint: pages
 title: Domov
 updated_by: 1
-updated_at: 1651047667
+updated_at: 1651056576
 header: 'The CAVE'
 subheader: 'Domaci okusi, ki vas bodo navdusili. Vabljeni!'
 bg_image: mike-PxJ9zkM2wdA-unsplash.jpg
@@ -106,6 +106,18 @@ pb:
             text: pojutrisnem
       -
         type: paragraph
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: /malice
+                  rel: null
+                  target: null
+                  title: null
+            text: 'link malice'
     type: tekst
     enabled: true
     poravnava_vsebine: left

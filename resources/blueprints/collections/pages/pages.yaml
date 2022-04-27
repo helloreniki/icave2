@@ -410,6 +410,9 @@ sections:
                     clearable: true
                     display: 'Barva ozadja'
                     max_items: 1
+            kontaktni_obrazec:
+              display: 'Kontaktni obrazec'
+              fields: {  }
           display: 'Page Builder'
           type: replicator
           icon: replicator
