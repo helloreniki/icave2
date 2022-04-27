@@ -3,11 +3,11 @@ id: a8895c33-3054-4260-ba6e-0c9a5dd266c9
 blueprint: pages
 title: Domov
 updated_by: 1
-updated_at: 1650812669
+updated_at: 1651047667
 header: 'The CAVE'
 subheader: 'Domaci okusi, ki vas bodo navdusili. Vabljeni!'
 bg_image: mike-PxJ9zkM2wdA-unsplash.jpg
-nadnaslov: 'Okusno. Domace.'
+nadnaslov: 'Okusno. Domače.'
 naslov: 'The CAVE'
 podnaslov: 'Domaci okusi, ki vas bodo navdusili. Vabljeni!'
 slika_ozadja: mike-PxJ9zkM2wdA-unsplash.jpg
@@ -20,19 +20,6 @@ gumb:
   -
     tekst: 'Danasnja ponudba'
 pb:
-  -
-    slika: jonathan-borba-uB7q7aipU2o-unsplash.jpg
-    naslov: 'Dobrodosli pri nas'
-    podnaslov: 'Vabimo vas na okusne malice ali le pijačo s prijatelji.'
-    swap: true
-    markdown: |-
-      Moznost **dostave** **malic** po Sentjerneju med 9. in 13. uro.
-      Ali poklici in prevzemi.
-
-      **031883303**
-    barva_ozadja: beige
-    type: slika_in_tekst
-    enabled: true
   -
     slike:
       -
@@ -48,6 +35,81 @@ pb:
         slika: jonathan-borba-uB7q7aipU2o-unsplash.jpg
     type: slika_mixed
     enabled: true
+  -
+    slika: jonathan-borba-uB7q7aipU2o-unsplash.jpg
+    naslov: 'Dobrodosli pri nas'
+    podnaslov: 'Vabimo vas na okusne malice ali le pijačo s prijatelji.'
+    swap: true
+    markdown: |-
+      Moznost **dostave** **malic** po Sentjerneju med 9. in 13. uro.
+      Ali poklici in prevzemi.
+
+      **031883303**
+    barva_ozadja: beige
+    type: slika_in_tekst
+    enabled: true
+  -
+    vsebina:
+      -
+        type: heading
+        attrs:
+          level: 2
+        content:
+          -
+            type: text
+            text: 'Stand up vecer z '
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: 'Gregorjem Bergantom'
+      -
+        type: heading
+        attrs:
+          level: 3
+        content:
+          -
+            type: text
+            text: 'Cetrtek ob 20h.'
+      -
+        type: set
+        attrs:
+          values:
+            type: slika
+            slika: abstract7.jpg
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Se vidimo!'
+      -
+        type: paragraph
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: danes
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: jutri
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: pojutrisnem
+      -
+        type: paragraph
+    type: tekst
+    enabled: true
+    poravnava_vsebine: left
+    barva_ozadja: beige
   -
     slika: chris-liverani-oCsaxvGCehM-unsplash-(1).jpg
     naslov: 'NOVO V PONUDBI !!!'

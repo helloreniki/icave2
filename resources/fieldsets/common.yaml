@@ -8,7 +8,6 @@ fields:
         beige: beige
         grayish: 'medium gray'
         white: white
-        blackish: black
         gray-900/90: 'dark gray'
       multiple: false
       clearable: false
