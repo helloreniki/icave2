@@ -4,10 +4,8 @@
     <div class="font-special text-gold text-3xl xs:text-4xl sm:text-5xl mb-8">Se zelite narociti na tedensko ponudbo malic?</div>
     <form action="{{ route('newsletter') }}" method="post">
       @csrf
-      <div class="flex flex-col justify-center max-w-sm mx-auto">
-        <label for="email" class="mb-4">Vpisite svoj email naslov</label>
-        <input type="text" id="email" name="email" placeholder="tvoj.email@email.com" class="text-center border border-gold px-4 py-2 focus:outline-none">
-        @error('email') <p class="text-gold text-sm">{{ $message }}</p> @enderror
+      <div class="flex flex-col justify-center max-w-sm mx-auto text-gold">
+        <x-form.input type="text" name="email" placeholder="tvoj.email@email.com" label="Vpisite svoj email naslov:" class="text-center" />
         <x-button type="submit" class="mt-8">Naroci se</x-button>
       </div>
     </form>
@@ -21,13 +19,7 @@
   @endif
 
   @if (session()->has('success'))
-    <div x-data="{ show: true }"
-        x-init="setTimeout(() => show = false, 4000)"
-        x-show="show"
-        class="fixed bottom-8 right-8 bg-beige text-gold py-3 px-6 text-xl tracking-wide border border-gold"
-    >
-        <p class="">{{ session('success') }}</p>
-    </div>
+    <x-success-message />
   @endif
 
 </div>
