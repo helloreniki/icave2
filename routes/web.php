@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\Statamic\FormController;
 
 
@@ -20,3 +21,4 @@ use App\Http\Controllers\Statamic\FormController;
 // });
 
 Route::post('/submitmyform', [FormController::class, 'submit']);
+Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter');
