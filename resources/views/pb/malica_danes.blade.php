@@ -19,8 +19,8 @@
               <div class="@if ($loop->even) bg-gradient-to-b @else bg-gradient-to-t @endif from-gold/30 to-white h-full border-b border-gold"></div>
             @endif
               <div class="font-semibold mb-1 group-hover:text-gold px-4 ">{{ $o['malica'] }}</div>
-                <div class="flex-auto">{{ $o['cena'] }} evrov </div>
-              <button>Klikni in prevzemi</button>
+              <div class="flex-auto">{{ $o['cena'] }} evrov </div>
+              {{-- <button>Klikni in prevzemi</button> --}}
           </div>
         @endforeach
       @empty
