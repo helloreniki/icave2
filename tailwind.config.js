@@ -28,6 +28,7 @@ module.exports = {
         black: colors.black,
         white: colors.white,
         gray: colors.trueGray, // blueGray, coolGray, gray, trueGray, warmGray
+        red: colors.red[500],
 
         gold: '#c59d5f',
         beige: '#f4f1ea',
