@@ -33,8 +33,7 @@ class NewsletterController extends Controller
            ]);
         }
 
-
-         return back()->with('success', 'Uspesno ste se narocili na novice!');
+         return back()->with('success', 'Uspesno ste se narocili na novice! Hvala.');
 
     }
 }

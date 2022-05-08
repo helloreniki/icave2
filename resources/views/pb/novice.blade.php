@@ -18,8 +18,4 @@
   </div>
   @endif
 
-  @if (session()->has('success'))
-    <x-success-message />
-  @endif
-
 </div>

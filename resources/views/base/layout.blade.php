@@ -50,6 +50,10 @@
 
   @include('parts.footer')
 
+  @if (session()->has('success'))
+    <x-success-message />
+  @endif
+
 </body>
 
 </html>

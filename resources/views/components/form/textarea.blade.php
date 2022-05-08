@@ -5,7 +5,7 @@
   <textarea
       name="{{ $name }}"
       id="{{ $name }}"
-      {{ $attributes->merge(['class' => "border border-gold"]) }}
+      {{ $attributes->merge(['class' => "border border-gold text-gray-900 "]) }}
       rows="10"
   >
   </textarea>

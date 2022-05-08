@@ -17,10 +17,6 @@
 
       <x-button type="submit" class="w-full my-12 ">Poslji sporocilo</x-button>
 
-      @if (session()->has('success'))
-       <x-success-message />
-      @endif
-
     </form>
   </div>
 </div>
