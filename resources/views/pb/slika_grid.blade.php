@@ -10,7 +10,7 @@
           // dd($slika);
       @endphp
 
-      <div class="slika-{{$type_counter}} will-change-transform overflow-hidden ">
+      <div class="slika-{{$block_counter}} will-change-transform overflow-hidden ">
         <img src="{{statamic_image($slika, ['w' => 1200, 'h' => 600] )}}" alt="" class="hover:scale-105 transition duration-800 ease-in-out  ">
       </div>
 
@@ -18,13 +18,13 @@
   </div>
 
   <script>
-    gsap.from(".slika-{{$type_counter}}", {
+    gsap.from(".slika-{{$block_counter}}", {
         duration: {{ sizeof($block['slike']) * 0.33 }},
         opacity:0.25,
         ease:"power.out",
         stagger:0.05,
         scrollTrigger:{
-          trigger:".slika-{{$type_counter}}",
+          trigger:".slika-{{$block_counter}}",
           markers: false,
           toggleActions: "restart none none none"
         }

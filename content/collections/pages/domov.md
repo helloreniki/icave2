@@ -3,7 +3,7 @@ id: a8895c33-3054-4260-ba6e-0c9a5dd266c9
 blueprint: pages
 title: Domov
 updated_by: 1
-updated_at: 1651056576
+updated_at: 1652468612
 header: 'The CAVE'
 subheader: 'Domaci okusi, ki vas bodo navdusili. Vabljeni!'
 bg_image: mike-PxJ9zkM2wdA-unsplash.jpg
@@ -83,27 +83,30 @@ pb:
         content:
           -
             type: text
+            marks:
+              -
+                type: bold
             text: 'Se vidimo!'
       -
         type: paragraph
+        content:
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: 'Lorem Ipsum'
+          -
+            type: text
+            text: "\_is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      -
+        type: paragraph
       -
         type: paragraph
         content:
           -
             type: text
-            text: danes
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: jutri
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: pojutrisnem
+            text: trakllalakas;jddjfsk
       -
         type: paragraph
         content:
@@ -121,10 +124,15 @@ pb:
     type: tekst
     enabled: true
     poravnava_vsebine: left
-    barva_ozadja: beige
+  -
+    slika: jakub-kapusnak-4f4YZfDMLeU-unsplash.jpg
+    sirina: full
+    visina: nizka
+    type: slika_banner
+    enabled: true
   -
     slika: chris-liverani-oCsaxvGCehM-unsplash-(1).jpg
-    naslov: 'NOVO V PONUDBI !!!'
+    naslov: 'NOVO V PONUDBI'
     podnaslov: 'Piscancji burger v sezamovi bombetki'
     swap: false
     alineje:
@@ -137,6 +145,14 @@ pb:
     type: slika_in_tekst
     enabled: true
     markdown: 'Dober tek.'
+  -
+    slika: louis-hansel-wVoP_Q2Bg_A-unsplash.jpg
+    naslov: naslov
+    podnaslov: podnaslov
+    tekst: tekst
+    swap: false
+    type: slika_in_tekst
+    enabled: true
   -
     type: malica_danes
     enabled: true

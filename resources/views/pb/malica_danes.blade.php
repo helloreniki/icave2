@@ -4,8 +4,11 @@
   // dd($malica_danes);
 @endphp
 
-<div id="danasnja-ponudba" class="max-w-7xl mx-auto py-16 md:py-24 px-8 text-center">
-  <div class="font-special text-5xl sm:text-7xl text-gold tracking-wide mb-12 sm:mb-16">Danasnja ponudba</div>
+<div id="danasnja-ponudba" class="max-w-7xl mx-auto px-8 text-center
+  @if($barva_ozadja_current == $barva_ozadja_previous && !in_array($block_previous['type'], $image_blocks)) pt-8 md:pt-16 @else pt-16 md:pt-32 @endif
+  @if($barva_ozadja_current == $barva_ozadja_next && !in_array($block_next['type'], $image_blocks)) pb-8 md:pb-16 @else pb-16 md:pb-32 @endif
+">
+  <div class="font-special text-5xl xs:text-7xl text-gold tracking-wide mb-12 sm:mb-16">Danasnja ponudba</div>
     @forelse($malica_danes as $entry)
       <div class="text-2xl sm:text-3xl font-semibold mb-16 capitalize">{{ $entry->date()->locale('sl')->dayName }}, {{ $entry->date()->format('d.m.Y') }} </div>
       <div class="block space-y-4 sm:space-y-0 mx-auto max-w-md sm:max-w-none sm:flex sm:gap-6 sm:justify-center">
@@ -24,7 +27,7 @@
           </div>
         @endforeach
       @empty
-        <div class="">Trenutno ni vpisanih malic. Poglejte <a href="/malice" class="uppercase cursor-pointer hover:underline text-gold">tedensko ponudbo malic</a> ali <a href="/jedilni-list" class="uppercase cursor-pointer hover:underline text-gold">jedi po narocilu.</a></div>
+        <div class="text-lg sm:text-2xl leading-relaxed sm:leading-relaxed mb-4">Trenutno ni vpisanih malic. Poglejte <a href="/malice" class="uppercase cursor-pointer hover:underline text-gold">tedensko ponudbo malic</a> ali <a href="/jedilni-list" class="uppercase cursor-pointer hover:underline text-gold">jedi po narocilu.</a></div>
       @endforelse
     </div>
 </div>

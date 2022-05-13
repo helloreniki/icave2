@@ -108,6 +108,7 @@ sections:
                       grayish: 'medium gray'
                       white: white
                       gray-900/90: 'dark gray'
+                    clearable: true
                     display: 'Barva ozadja'
                     default: beige
             slika_banner:
@@ -381,25 +382,6 @@ sections:
                     display: Vsebina
                     type: bard
                     icon: bard
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-                -
-                  handle: poravnava_vsebine
-                  field:
-                    options:
-                      left: leva
-                      center: sredina
-                    multiple: false
-                    max_items: 1
-                    clearable: false
-                    searchable: true
-                    taggable: false
-                    push_tags: false
-                    cast_booleans: false
-                    display: 'Poravnava vsebine'
-                    type: select
-                    icon: select
                     listable: hidden
                     instructions_position: above
                     read_only: false

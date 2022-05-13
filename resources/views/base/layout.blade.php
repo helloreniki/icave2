@@ -30,22 +30,39 @@
   @include('parts.header')
 
   @php
+    $image_blocks = ['novice', 'slika_grid', 'slika_mixed'];
     $types = [];
+    $blocks = [];
     foreach ($pb as $block) {
       $types[] = $block['type'];
+      $blocks[] = $block;
     }
-    $type_counter = 0;
+    $block_counter = 0;
   @endphp
 
   @foreach ($pb as $block)
       @php
+          // dump($block)
           // $types[] = $block['type']; // arr of all block types on the page, already done in loop above
           $type_current = $block['type']; // or $types[$block_counter];
-          $type_previous = $types[$type_counter - 1] ?? false;
-          $type_next = $types[$type_counter + 1] ?? false;
-          $type_counter++;
+          $type_previous = $types[$block_counter - 1] ?? false;
+          $type_next = $types[$block_counter + 1] ?? false;
+
+          $block_previous = $blocks[$block_counter - 1] ?? false;
+          $block_next = $blocks[$block_counter + 1] ?? false;
+          $block_current = $block;
+
+          $barva_ozadja_previous = $blocks[$block_counter - 1]['barva_ozadja'] ?? false;
+          $barva_ozadja_next = $blocks[$block_counter + 1]['barva_ozadja'] ?? false;
+          $barva_ozadja_current = $block['barva_ozadja'] ?? false;
+
+          $block_counter++;
       @endphp
       @include('pb.' . $block['type'])
+      {{-- prev: @dump($block['barva_ozadja'] ?? false);
+      current: @dump($block_previous['barva_ozadja'] ?? false); --}}
+      {{-- prev: @dump($barva_ozadja_previous)
+      current: @dump($barva_ozadja_current) --}}
   @endforeach
 
   @include('parts.footer')
